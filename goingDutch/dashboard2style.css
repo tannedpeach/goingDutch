@@ -1,0 +1,314 @@
+
+header .logo span {
+    color:#007AF3;
+}
+
+header h2{
+    font-size: 2.4rem;
+    margin: 16px 0;
+    padding-left:15px;
+}
+
+body {
+    font-family: "Poppins";
+    overflow: hidden;
+    background-color: #ddd;
+  }
+
+.formbtn {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.btncancel {
+    appearance: none;
+    background-color: #701010;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 5px;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    will-change: transform;
+  }
+
+.formbtn:disabled {
+  pointer-events: none;
+}
+
+.formbtn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.formbtn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.btncancel:disabled {
+    pointer-events: none;
+  }
+  
+.btncancel:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+.btncancel:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+.dashbtn {
+    background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 4rem;
+    padding: 0 1.6rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    display: inline-block;
+  }
+  
+  .dashbtn {
+    box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+    transition-duration: .1s;
+  }
+  
+  @media (min-width: 768px) {
+    .dashbtn {
+      padding: 0 2.6rem;
+    }
+  }
+
+#expenseTable {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    vertical-align: middle;
+    margin-right: 20px;
+
+    
+  }
+  
+  #expenseTable td{
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #expenseTable tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #expenseTable tr:hover {background-color: #ddd;}
+  
+  #expenseTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #007AF3;
+    color: white;
+  }
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 125px;
+    left: 500px;
+    /* border: 3px solid #f1f1f1; */
+    z-index: 8;
+    overflow: auto;
+    width: 100%;
+    height: 70%;
+}
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgb(32, 84, 180);
+    position: relative;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 75%;
+    padding: 15px;
+    margin: 15% auto;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+
+
+
+.topbar, .topbar .actions {
+    background-color: #eee;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 24px !important;
+    /* line-height: 38px;
+    height: 38px; */
+    display: inline-block;
+    vertical-align: middle;
+    color: #333;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+.topbar td .actions {
+    
+    display: inline;
+    
+    margin-left: 575px;
+}
+/*.btn:first-child {
+    *margin-left: 0;
+} */
+
+.mainArea {
+    font-size:20px;
+    padding:20px;
+
+}
+
+#expenseTable td, th{
+    text-align:center;
+}
+
+
+
+.form-popup1 {
+    /* margin: 0 auto;
+    padding: 4rem 0;
+    width: 90%;
+    max-width: 60rem; */
+    display: none;
+    position: fixed;
+    top: 55px;
+    left: 350px;
+    /* border: 3px solid #f1f1f1; */
+    z-index: 8;
+    overflow: auto;
+  }
+  
+  .fcontainer {
+    box-sizing: border-box;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: hsl(0, 0%, 100%);
+    border: 4px solid hsl(0, 0%, 90%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .full-width {
+    grid-column: span 2;
+  }
+
+.fcontainer input[type="text"],
+input[type="email"],
+select,
+textarea {
+  font: 1.25rem / 1.5 sans-serif;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+}
+
+h1.wrapper{
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+  }
+h1.wrapper::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 28px;
+    border-radius: 12px;
+    background: #007AF3;
+  }
